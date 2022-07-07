@@ -1,5 +1,12 @@
 terminal commands 
 
-python manage.py migrate --database=users_db      # this will target specfic databse and do a migration to that specfic database 
+1. create new databases in settings.py file. 
+2. create new database routers in routers/db_routers.py 
+3. now we can run migrations to the database we specify 
+4. after running terminal commands to create new databases we can open in sqlite explorer
 
+USERS_DB
+python manage.py migrate --database=users_db      # the initial migration will create our users.db.sqlite3 database. 
 python manage.py createsuperuser --database=users_db      # creates superuser for this specfic database 
+
+# pushing changes do makemigrations then the specfic migrate database command 

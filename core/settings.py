@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'blue',
+    'aqua'
 ]
 
 MIDDLEWARE = [
@@ -139,5 +142,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-DATABASE_ROUTERS = ['routers.db_routers.AuthRouter']    # we are accessing  routers app , db_routers.py file , AuthRouter class 
+DATABASE_ROUTERS = ['routers.db_routers.AuthRouter','routers.db_routers.Blue', 'routers.db_routers.Aqua']    # we are accessing  routers app , db_routers.py file , AuthRouter class 
                                                                                                             # same with Blue class and Aqua class
