@@ -1,4 +1,5 @@
 Django multiple databases
+https://docs.djangoproject.com/en/4.0/topics/db/multi-db/
 
 - configure multiple databases
 - databse routers

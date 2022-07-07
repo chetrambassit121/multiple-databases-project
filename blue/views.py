@@ -9,7 +9,7 @@ def viewdata(request):
     return render(request, "view.html", {"data": data})
 
 class Add(CreateView):
-  model = Aqua
+  model = Blue
   fields = ('title','content','app_name' )
   template_name = 'add.html'
   success_url = '/blue/'
