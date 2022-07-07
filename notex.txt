@@ -1,12 +1,35 @@
+Django multiple databases
+
+- configure multiple databases
+- databse routers
+- selecting databases (CRUD)
+    - class based views
+    - functions
+- using multiple databses within django admin 
+
+
+
+
 terminal commands 
 
 1. create new databases in settings.py file. 
 2. create new database routers in routers/db_routers.py 
 3. now we can run migrations to the database we specify 
-4. after running terminal commands to create new databases we can open in sqlite explorer
+
 
 USERS_DB
-python manage.py migrate --database=users_db      # the initial migration will create our users.db.sqlite3 database. 
-python manage.py createsuperuser --database=users_db      # creates superuser for this specfic database 
+python manage.py migrate --database=users_db              # the initial migration will create our users.db.sqlite3 database. 
+python manage.py createsuperuser --database=users_db      # creates superuser saved onto users_db
 
-# pushing changes do makemigrations then the specfic migrate database command 
+
+BLUE_DB
+python manage.py migrate --database=blue_db      
+  
+
+
+AQUA_DB
+python manage.py migrate --database=aqua_db       
+     
+
+4. after running terminal commands for inital migrate to create new databases, we can open the databses in sqlite explorer
+5. after inital migrate, any models we add/changes we make we do makemigrations first, followed by migrate 
